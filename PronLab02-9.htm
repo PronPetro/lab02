@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Про себе</h1>
+        <p></p>
+        <h1>Моє хобі</h1>
+        <h2>Програмування</h2>
+        <p>
+        d = opendir(rootDir);
+        <br>
+        int files = 0;
+        <br><br>
+        if (!d) {
+            <br>
+        &nbsp; printf(KBRED KBLK NSTR, "  Directory not found ");
+            <br>
+        &nbsp; remove_last_folder(rootDir);
+            <br>
+            <br>
+        &nbsp; d = opendir(rootDir);
+            <br>
+        &nbsp; printf(KBBLK KWHT);
+            <br>
+        }
+        <br><br>
+        printf(KBLU NSTR, rootDir);
+        <br><br>    
+        while ((dir = readdir(d)) != NULL) {
+        <br>
+        &nbsp; if (strcmp(dir->d_name, "..") != 0 && strcmp(dir->d_name, ".") != 0) {
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; files += 1;
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; printf(KWHT "├─" NSTR, dir->d_name);
+        <br>
+        &nbsp; }
+        <br>
+        }
+        <br>
+        closedir(d);
+        </p>
+        <p align="right">Студент групи 102-Тк Пронь П.В.</p>
+    </body>
+</html>
